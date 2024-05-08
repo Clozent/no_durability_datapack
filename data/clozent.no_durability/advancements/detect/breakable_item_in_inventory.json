@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "breakable_item_in_inventory": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [{
+
+                    "predicates": {
+                        "minecraft:damage": {
+                            "durability": {"min": 0}
+                        }
+                    }
+                }]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "breakable_item_in_inventory"
+        ]
+    ],
+    "rewards": {
+        "function": "clozent.no_durability:handlers/handle_breakable_item_in_inventory"
+    }
+}
